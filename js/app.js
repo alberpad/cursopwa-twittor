@@ -1,6 +1,11 @@
 "use strict";
+let url = window.location.href;
+let swLocation = '/cursopwa-twittor/sw.js';
+if (url.includes('localhost')) {
+    swLocation = '/sw.js';
+}
 if (navigator.serviceWorker) {
-    navigator.serviceWorker.register('sw.js');
+    navigator.serviceWorker.register(swLocation);
 }
 let titulo = $('#titulo');
 let nuevoBtn = $('#nuevo-btn');
