@@ -1,6 +1,6 @@
 "use strict";
 if (navigator.serviceWorker) {
-    navigator.serviceWorker.register('/sw.js');
+    navigator.serviceWorker.register('sw.js');
 }
 let titulo = $('#titulo');
 let nuevoBtn = $('#nuevo-btn');
