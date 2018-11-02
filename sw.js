@@ -41,8 +41,8 @@ self.addEventListener('activate', (e) => {
                 return caches.delete(key);
             }
         });
-        e.waitUntil(respuesta);
     });
+    e.waitUntil(respuesta);
 });
 self.addEventListener('fetch', (e) => {
     const respuesta = caches.match(e.request).then((res) => {

@@ -46,8 +46,9 @@ self.addEventListener('activate', (e: any) => {
         return caches.delete(key);
       }
     });
-    e.waitUntil(respuesta);
   });
+  //e.respondWith(respuesta);
+  e.waitUntil(respuesta);
 });
 
 self.addEventListener('fetch', (e: any) => {
